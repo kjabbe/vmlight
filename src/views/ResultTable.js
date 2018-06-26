@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { Header } from 'semantic-ui-react';
 
 import { getResult } from '../redux/actions';
 import TableRes from './TableRes';
@@ -13,9 +12,9 @@ class ResultTable extends React.Component {
 
   render() {
     const { result } = this.props;
+    console.log(result);
     return(
       <div className="result-view">
-        <Header as="h5">VM</Header>
         {result && <TableRes result={result} /> }
       </div>
     );

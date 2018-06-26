@@ -1,4 +1,7 @@
 import os
+import json
+import sys
+import xlrd
 from flask import Flask, render_template, send_from_directory, jsonify, json
 
 template_dir = os.path.abspath('build')
@@ -30,10 +33,28 @@ def result():
     return response
 
 def showjson():
+    createJSON()
     SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
-    json_url = os.path.join(SITE_ROOT, "25062018.json")
+    json_url = os.path.join(SITE_ROOT, "fasit.json")
     data = json.load(open(json_url))
     return data
 
+def createJSON():
+    workbook = xlrd.open_workbook("Netlight VM-tipping2018_resultater.xlsx")
+    worksheet = workbook.sheet_by_name("Resultater")
+    data = []
+    keys = [v.value for v in worksheet.row(0)]
+    for row_number in range(worksheet.nrows):
+        if row_number == 0:
+            continue
+        row_data = {}
+        for col_number, cell in enumerate(worksheet.row(row_number)):
+            row_data[keys[col_number]] = cell.value
+        data.append(row_data)
+
+    with open("fasit.json", 'w') as json_file:
+        json_file.write(json.dumps(data))
+
 if __name__ == '__main__':
-    app.run(debug=True)
+    #app.run(debug=True)
+    app.run(host='0.0.0.0', port=os.environ.get('PORT', 5000))
