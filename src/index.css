@@ -1,5 +1,474 @@
-body {
+body, html, #root, .container {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  height: 100%;
+  width: 100%;
+}
+
+body, html {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 100%;
+}
+
+.landing-view {
+  height: 100%;
+}
+
+.hero-section {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+
+  color: #FFF;
+}
+
+.ph-logo {
+  width: 170px;
+  margin: 20px;
+  position: absolute;
+}
+
+.hero-section .log-in-out {
+  position: absolute;
+  right: 4%;
+  top: 6%;
+}
+
+.hero-section .content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-section .content h1 {
+  position: relative;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.hero-section .content img.sommerfugl {
+  position: absolute;
+  display: block;
+  width: 2rem;
+  top: -1rem;
+  right: -1rem;
+}
+
+.hero-section .ready-for-s10 p {
+  text-align: center;
+  font-size: .9rem;
+  margin: 0 0 30px;
+}
+
+.hero-section .actions {
+  margin-top: 20px;
+}
+
+.hero-section .content .button {
+  margin: 0 10px;
+}
+
+.hero-section .background {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-section .background .shade {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.hero-section .background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.concept-section {
+  min-height: 100%;
+  padding: 40px 0;
+  overflow: hidden;
+  background: #FFF;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.concept-section h1 {
+  color: #555;
+}
+
+.concept-section .stage {
+  max-width: 800px;
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+  margin-right: 30px;
+}
+
+.concept-section .stage .stage-icon {
+  width: 92px;
+  color: #444;
+}
+
+.concept-section .stage p {
+  width: calc(100% - 92px);
+  color: #777;
+  font-size: 1rem;
+}
+
+
+
+.contestants-section {
+  min-height: 100%;
+  overflow: hidden;
+  background: #ea8685;
+  color: #FFF;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contestants-section h1.section-header {
+  margin: 40px 0 20px;
+}
+
+.contestants-section .team-info {
+  max-width: 900px;
+  text-align: center;
+  margin: 20px 0 30px;
+}
+
+.contestants-section .team-info p.progress {
+  margin: 40px 0 20px;
+}
+
+.landing-view .team {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.landing-view .team .member {
+  width: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 20px;
+}
+
+.landing-view .team .profile {
+  display: block;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.landing-view .team .profile img {
+  width: 100%;
+  height: 100%;
+}
+
+.landing-view .team .profile .missing-member {
+  width: 100%;
+  height: 100%;
+  background: #596275;
+  color: #FFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+}
+
+.landing-view .team .name {
+  margin-top: 5px;
+  font-size: .9rem;
+  line-height: 1rem;
+}
+
+
+
+.contestants-section .scroll-info {
+  display: none;
+  text-align: center;
+  color: #FFF;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.contestants-section .scroll-info span {
+  display: block;
+  font-size: .8rem;
+}
+
+.contestant-selector {
+  width: 100%;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+
+  background: #596275;
+  padding: 20px 0 0;
+  margin-bottom: 40px;
+}
+
+.contestant-selector-wrapper {
+  display: flex;
+  margin: 0 auto;
+}
+
+.contestant-selector .contestant-thumbnail {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  margin-bottom: 10px;
+}
+
+.contestant-selector .contestant-thumbnail img {
+  display: block;
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  transition: 0.1s ease;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.5);
+  margin: 0 auto;
+}
+
+.contestant-selector .contestant-thumbnail .in-team-overlay {
+  position: absolute;
+  top: 0;
+  left: 8px;
+  width: 48px;
+  height: 48px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  color: #27ae60;
+  opacity: 0;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+.contestant-selector .contestant-thumbnail.in-team .in-team-overlay {
+  opacity: 1;
+}
+
+.contestant-selector .contestant-thumbnail hr {
+  border: none;
+  border-bottom: 3px solid rgba(0, 0, 0, 0);
+  transition: 0.2s ease;
+  width: 0;
+  margin: 10px auto;
+}
+
+.contestant-selector .contestant-thumbnail:hover hr {
+  width: 80%;
+  border-color: #f8a5c2;
+}
+
+.contestant-selector .contestant-thumbnail.selected hr {
+  width: 80%;
+  border-color: #FFF;
+}
+
+
+.contestant {
+  width: 600px;
+  padding: 20px;
+  background: #FFF;
+  color: #777;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  margin-bottom: 80px;
+}
+
+.contestant .left-panel {
+  float: left;
+  width: 156px;
+  margin-right: 20px;
+  text-align: center;
+}
+
+.contestant .right-panel {
+  width: auto;
+  overflow: hidden;
+}
+
+.contestant h1.name {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.contestant .meta {
+  margin: 2px 0;
+  font-size: .8rem;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  color: #666;
+}
+
+.contestant .meta > div {
+  margin-right: 20px;
+}
+
+.contestant .meta span {
+  margin-left: 5px;
+  color: #777;
+}
+
+.contestant hr {
+  width: calc(100% - 10px);
+  border: none;
+  border-top: 1px solid #EEE;
+  margin: 10px 0 15px;
+}
+
+.contestant p.bio {
+  font-size: 0.8rem;
+  line-height: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.contestant img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #E0E0E0;
+  margin-bottom: 8px;
+}
+
+
+/* Small screens need different contestants view */
+@media only screen and (max-width: 768px) {
+  .landing-view .team .member {
+    width: 56px;
+    margin: 0 10px;
+  }
+
+  .landing-view .team .profile {
+    width: 56px;
+    height: 56px;
+  }
+
+  .contestants-section .contestant-selector {
+    margin-bottom: 0;
+  }
+
+  .contestants-section .scroll-info {
+    display: block;
+  }
+
+  .contestant {
+    width: 100%;
+    border-radius: 0;
+    margin-bottom: 0;
+  }
+
+  .contestant .left-panel {
+    width: 100%;
+    float: none;
+  }
+
+  .contestant .right-panel {
+    width: 100%;
+  }
+
+  .contestant img {
+    width: 50%;
+    margin: 0 auto 15px;
+  }
+
+  .contestant button.ui {
+    margin: 5px 0 15px;
+  }
+
+  .contestant h1.name {
+    text-align: center;
+  }
+
+  .contestant .meta {
+    justify-content: center;
+  }
+
+  .contestant .meta > div {
+    margin: 0 10px;
+  }
+
+  .contestant p.bio {
+    font-size: .85rem;
+  }
+}
+
+
+.facebook-badge {
+  color: white;
+  color: #4267b2;
+  font-size: 30px;
+}
+
+.paradise-badge {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+}
+
+
+img.mtg-logo {
+  position: relative;
+  top: -10px;
+  display: block;
+  width: 160px;
+  margin-left: 20px;
+}
+
+
+/**
+ * iPad with portrait orientation.
+ */
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait){
+  .landing-view {
+    height: 1024px;
+  }
+}
+
+/**
+ * iPad with landscape orientation.
+ */
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape){
+  .landing-view {
+    height: 768px;
+  }
+}
+
+/**
+ * iPhone 5
+ * You can also target devices with aspect ratio.
+ */
+@media screen and (device-aspect-ratio: 40/71) {
+  .landing-view {
+    height: 500px;
+  }
+}
+
+/* fix semantic width bug for on mobile */
+.statistics {
+  width: 100%;
 }
