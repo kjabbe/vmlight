@@ -1,0 +1,296 @@
+[
+ {
+   "Hjemmelag": "",
+   "FIELD2": null,
+   "FIELD3": null,
+   "Bortelag": ""
+ },
+ {
+   "Hjemmelag": "Russland",
+   "FIELD2": 3,
+   "FIELD3": 1,
+   "Bortelag": "Saudi Arabia"
+ },
+ {
+   "Hjemmelag": "Egypt",
+   "FIELD2": 0,
+   "FIELD3": 3,
+   "Bortelag": "Uruguay"
+ },
+ {
+   "Hjemmelag": "Marokko",
+   "FIELD2": 0,
+   "FIELD3": 1,
+   "Bortelag": "Iran"
+ },
+ {
+   "Hjemmelag": "Portugal",
+   "FIELD2": 1,
+   "FIELD3": 0,
+   "Bortelag": "Spania"
+ },
+ {
+   "Hjemmelag": "Frankrike",
+   "FIELD2": 4,
+   "FIELD3": 1,
+   "Bortelag": "Australia"
+ },
+ {
+   "Hjemmelag": "Argentina",
+   "FIELD2": 2,
+   "FIELD3": 1,
+   "Bortelag": "Island"
+ },
+ {
+   "Hjemmelag": "Peru",
+   "FIELD2": 3,
+   "FIELD3": 1,
+   "Bortelag": "Danmark"
+ },
+ {
+   "Hjemmelag": "Kroatia",
+   "FIELD2": 4,
+   "FIELD3": 0,
+   "Bortelag": "Nigeria"
+ },
+ {
+   "Hjemmelag": "Costa Rica",
+   "FIELD2": 0,
+   "FIELD3": 2,
+   "Bortelag": "Serbia"
+ },
+ {
+   "Hjemmelag": "Tyskland",
+   "FIELD2": 4,
+   "FIELD3": 1,
+   "Bortelag": "Mexico"
+ },
+ {
+   "Hjemmelag": "Brasil",
+   "FIELD2": 5,
+   "FIELD3": 1,
+   "Bortelag": "Sveits"
+ },
+ {
+   "Hjemmelag": "Sverige",
+   "FIELD2": 2,
+   "FIELD3": 1,
+   "Bortelag": "Sør-Korea"
+ },
+ {
+   "Hjemmelag": "Belgia",
+   "FIELD2": 5,
+   "FIELD3": 0,
+   "Bortelag": "Panama"
+ },
+ {
+   "Hjemmelag": "Tunisia",
+   "FIELD2": 1,
+   "FIELD3": 3,
+   "Bortelag": "England"
+ },
+ {
+   "Hjemmelag": "Colombia",
+   "FIELD2": 3,
+   "FIELD3": 0,
+   "Bortelag": "Japan"
+ },
+ {
+   "Hjemmelag": "Polen",
+   "FIELD2": 2,
+   "FIELD3": 1,
+   "Bortelag": "Senegal"
+ },
+ {
+   "Hjemmelag": "Russland",
+   "FIELD2": 2,
+   "FIELD3": 0,
+   "Bortelag": "Egypt"
+ },
+ {
+   "Hjemmelag": "Portugal",
+   "FIELD2": 3,
+   "FIELD3": 0,
+   "Bortelag": "Marokko"
+ },
+ {
+   "Hjemmelag": "Uruguay",
+   "FIELD2": 4,
+   "FIELD3": 0,
+   "Bortelag": "Saudi Arabia"
+ },
+ {
+   "Hjemmelag": "Iran",
+   "FIELD2": 1,
+   "FIELD3": 4,
+   "Bortelag": "Spania"
+ },
+ {
+   "Hjemmelag": "Danmark",
+   "FIELD2": 2,
+   "FIELD3": 1,
+   "Bortelag": "Australia"
+ },
+ {
+   "Hjemmelag": "Frankrike",
+   "FIELD2": 4,
+   "FIELD3": 1,
+   "Bortelag": "Peru"
+ },
+ {
+   "Hjemmelag": "Argentina",
+   "FIELD2": 3,
+   "FIELD3": 1,
+   "Bortelag": "Kroatia"
+ },
+ {
+   "Hjemmelag": "Brasil",
+   "FIELD2": 2,
+   "FIELD3": 2,
+   "Bortelag": "Costa Rica"
+ },
+ {
+   "Hjemmelag": "Nigeria",
+   "FIELD2": 0,
+   "FIELD3": 1,
+   "Bortelag": "Island"
+ },
+ {
+   "Hjemmelag": "Serbia",
+   "FIELD2": 2,
+   "FIELD3": 0,
+   "Bortelag": "Sveits"
+ },
+ {
+   "Hjemmelag": "Belgia",
+   "FIELD2": 2,
+   "FIELD3": 0,
+   "Bortelag": "Tunisia"
+ },
+ {
+   "Hjemmelag": "Sør-Korea",
+   "FIELD2": 0,
+   "FIELD3": 1,
+   "Bortelag": "Mexico"
+ },
+ {
+   "Hjemmelag": "Tyskland",
+   "FIELD2": 3,
+   "FIELD3": 1,
+   "Bortelag": "Sverige"
+ },
+ {
+   "Hjemmelag": "England",
+   "FIELD2": 2,
+   "FIELD3": 1,
+   "Bortelag": "Panama"
+ },
+ {
+   "Hjemmelag": "Japan",
+   "FIELD2": 1,
+   "FIELD3": 1,
+   "Bortelag": "Senegal"
+ },
+ {
+   "Hjemmelag": "Polen",
+   "FIELD2": 1,
+   "FIELD3": 1,
+   "Bortelag": "Colombia"
+ },
+ {
+   "Hjemmelag": "Saudi Arabia",
+   "FIELD2": 0,
+   "FIELD3": 0,
+   "Bortelag": "Egypt"
+ },
+ {
+   "Hjemmelag": "Uruguay",
+   "FIELD2": 2,
+   "FIELD3": 0,
+   "Bortelag": "Russland"
+ },
+ {
+   "Hjemmelag": "Spania",
+   "FIELD2": 2,
+   "FIELD3": 0,
+   "Bortelag": "Marokko"
+ },
+ {
+   "Hjemmelag": "Iran",
+   "FIELD2": 1,
+   "FIELD3": 2,
+   "Bortelag": "Portugal"
+ },
+ {
+   "Hjemmelag": "Danmark",
+   "FIELD2": 1,
+   "FIELD3": 3,
+   "Bortelag": "Frankrike"
+ },
+ {
+   "Hjemmelag": "Australia",
+   "FIELD2": 1,
+   "FIELD3": 1,
+   "Bortelag": "Peru"
+ },
+ {
+   "Hjemmelag": "Island",
+   "FIELD2": 2,
+   "FIELD3": 1,
+   "Bortelag": "Kroatia"
+ },
+ {
+   "Hjemmelag": "Nigeria",
+   "FIELD2": 1,
+   "FIELD3": 3,
+   "Bortelag": "Argentina"
+ },
+ {
+   "Hjemmelag": "Sør-Korea",
+   "FIELD2": 1,
+   "FIELD3": 3,
+   "Bortelag": "Tyskland"
+ },
+ {
+   "Hjemmelag": "Mexico",
+   "FIELD2": 1,
+   "FIELD3": 2,
+   "Bortelag": "Sverige"
+ },
+ {
+   "Hjemmelag": "Serbia",
+   "FIELD2": 1,
+   "FIELD3": 3,
+   "Bortelag": "Brasil"
+ },
+ {
+   "Hjemmelag": "Sveits",
+   "FIELD2": 1,
+   "FIELD3": 2,
+   "Bortelag": "Costa Rica"
+ },
+ {
+   "Hjemmelag": "Japan",
+   "FIELD2": 0,
+   "FIELD3": 1,
+   "Bortelag": "Polen"
+ },
+ {
+   "Hjemmelag": "Senegal",
+   "FIELD2": 0,
+   "FIELD3": 2,
+   "Bortelag": "Colombia"
+ },
+ {
+   "Hjemmelag": "England",
+   "FIELD2": 2,
+   "FIELD3": 1,
+   "Bortelag": "Belgia"
+ },
+ {
+   "Hjemmelag": "Panama",
+   "FIELD2": 1,
+   "FIELD3": 1,
+   "Bortelag": "Tunisia"
+ }
+]

@@ -25,6 +25,10 @@ def send_css(path):
 def send_media(path):
     return send_from_directory('build/static/media', path)
 
+@app.route('/static/bets/<path:path>')
+def send_bets(path):
+    return send_from_directory('bets', path)
+
 # Actual stuff
 @app.route('/rest/result')
 def result():

@@ -7,6 +7,7 @@ const TableRes = ({ result }) => {
     <Table celled size="small" unstackable>
       <Table.Header>
         <Table.Row>
+          <Table.HeaderCell>#</Table.HeaderCell>
           <Table.HeaderCell>Navn</Table.HeaderCell>
           <Table.HeaderCell>Poeng</Table.HeaderCell>
           <Table.HeaderCell>Mål</Table.HeaderCell>
@@ -15,8 +16,9 @@ const TableRes = ({ result }) => {
 
       <Table.Body>
         {
-          result.map(user => (
+          result.map((user, index) => (
             <Table.Row key={user.Navn}>
+              <Table.Cell>{index + 1}</Table.Cell>
               <Table.Cell>{user.Navn}</Table.Cell>
               <Table.Cell>{user.Poeng}</Table.Cell>
               <Table.Cell>{console.log(user)}</Table.Cell>

@@ -1,13 +1,11 @@
 import { merge } from 'lodash';
 
-const API_URL = 'http://localhost:5000'
-
-const anyRequest = (url, additionalOptions) => {
+const anyRequest = (api_url, url, additionalOptions) => {
   const options = {
     headers: {}
   };
 
-  return fetch(`${url}`, merge(options, additionalOptions))
+  return fetch(`${api_url}${url}`, merge(options, additionalOptions))
   .then(res => {
     if (Math.floor(res.status / 100) === 5) { // 5XX
       const contentType = res.headers.get("content-type");
@@ -22,16 +20,16 @@ const anyRequest = (url, additionalOptions) => {
 };
 
 
-const getRequest = (url, additionalOptions) =>
-  anyRequest(url, {
+const getRequest = (api_url, url, additionalOptions) =>
+  anyRequest(api_url, url, {
     method: 'GET',
     ...additionalOptions
   })
   .then(res => res.json());
 
 
-const postRequest = (url, body, additionalOptions) =>
-  anyRequest(url, {
+const postRequest = (api_url, url, body, additionalOptions) =>
+  anyRequest(api_url, url, {
     method: 'POST',
     headers: {
       'Content-Type': 'Application/JSON'
@@ -44,8 +42,8 @@ const postRequest = (url, body, additionalOptions) =>
     if(contentType && contentType.includes("application/json")) return res.json();
   });
 
-const putRequest = (url, body, additionalOptions) =>
-  anyRequest(url, {
+const putRequest = (api_url, url, body, additionalOptions) =>
+  anyRequest(api_url, url, {
     method: 'PUT',
     headers: {
       'Content-Type': 'Application/JSON'
@@ -54,8 +52,8 @@ const putRequest = (url, body, additionalOptions) =>
     ...additionalOptions
   });
 
-const deleteRequest = (url, additionalOptions) =>
-  anyRequest(url, {
+const deleteRequest = (api_url, url, additionalOptions) =>
+  anyRequest(api_url, url, {
     method: 'DELETE',
     headers: {
       'Content-Type': 'Application/JSON'

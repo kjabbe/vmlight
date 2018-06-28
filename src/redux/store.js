@@ -2,10 +2,12 @@ import { createStore, combineReducers } from 'redux';
 
 import {
   resultReducer,
+  fixturesReducer,
 } from './reducers';
 
 const reducer = combineReducers({
   result: resultReducer,
+  fixtures: fixturesReducer,
 });
 
 const configureStore = () => {
