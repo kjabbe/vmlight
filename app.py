@@ -63,7 +63,6 @@ def refresh():
     #return Response("{s:'o'}", status=201, mimetype='application/json')
 
 def showjson():
-    createJSON()
     SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
     json_url = os.path.join(SITE_ROOT, "fasit.json")
     data = json.load(open(json_url))
