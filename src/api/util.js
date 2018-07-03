@@ -5,7 +5,7 @@ const anyRequest = (api_url, url, additionalOptions) => {
     headers: {}
   };
 
-  return fetch(`${api_url}${url}`, merge(options, additionalOptions))
+  return fetch(`${url}`, merge(options, additionalOptions))
   .then(res => {
     if (Math.floor(res.status / 100) === 5) { // 5XX
       const contentType = res.headers.get("content-type");

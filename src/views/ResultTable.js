@@ -13,8 +13,7 @@ class ResultTable extends React.Component {
   }
 
   render() {
-    const { result, fixtures } = this.props;
-    //console.log(fixtures);
+    const { result } = this.props;
     return(
       <div className="result-view">
         {result && <TableRes result={result} /> }

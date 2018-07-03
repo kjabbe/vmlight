@@ -2,7 +2,7 @@ import React from 'react';
 import { Table } from 'semantic-ui-react';
 
 const TableRes = ({ result }) => {
-  result.map(user => (console.log(user)));
+  result.sort(function (x, y) { return y.Poeng - x.Poeng || x["Diff, antall gjettede mål (jo lavere, jo bedre)"] - y["Diff, antall gjettede mål (jo lavere, jo bedre)"]; });
   return (
     <Table celled size="small" unstackable>
       <Table.Header>
@@ -10,7 +10,7 @@ const TableRes = ({ result }) => {
           <Table.HeaderCell>#</Table.HeaderCell>
           <Table.HeaderCell>Navn</Table.HeaderCell>
           <Table.HeaderCell>Poeng</Table.HeaderCell>
-          <Table.HeaderCell>Mål</Table.HeaderCell>
+          {/*<Table.HeaderCell>Mål</Table.HeaderCell>*/}
         </Table.Row>
       </Table.Header>
 
@@ -21,7 +21,7 @@ const TableRes = ({ result }) => {
               <Table.Cell>{index + 1}</Table.Cell>
               <Table.Cell>{user.Navn}</Table.Cell>
               <Table.Cell>{user.Poeng}</Table.Cell>
-              <Table.Cell>{console.log(user)}</Table.Cell>
+              {/*<Table.Cell>{user["Diff, antall gjettede mål (jo lavere, jo bedre)"]}</Table.Cell>*/}
             </Table.Row>
           ))
         }

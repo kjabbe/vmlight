@@ -2,6 +2,7 @@ import os
 import json
 import sys
 import xlrd
+from subprocess import Popen, PIPE
 from flask import Flask, render_template, send_from_directory, jsonify, json
 
 template_dir = os.path.abspath('build')
@@ -35,6 +36,31 @@ def result():
     response = jsonify(showjson())
     response.headers.add('Access-Control-Allow-Origin', '*')
     return response
+
+@app.route('/refresh')
+def refresh():
+    #subprocess.call("./getExcel.sh", shell=True)
+    p1 = Popen(["./getExcel.sh"], stdout=PIPE)
+    p1.communicate()
+    createJSON()
+    #subprocess.call(, shell=True)
+    #sed -i 's/\"\": \"Toppscorer i VM:\", \"Diff, antall gjettede m\\u00e5l \(jo lavere, jo bedre\)\": \"\", \"Navn\": \"M\\u00e5lscorere\", \"Poeng\": \"M\\u00e5l\",//g' fasit.json
+    #{
+    #    "": "Toppscorer i VM:",
+    #    "Diff, antall gjettede m\u00e5l (jo lavere, jo bedre)": "",
+    #    "Navn": "M\u00e5lscorere",
+    #    "Poeng": "M\u00e5l"
+    #},
+    p2 = Popen("sed -i 's/\"\": \"Toppscorer i VM:\", \"Diff, antall gjettede m\\u00e5l \(jo lavere, jo bedre\)\": \"\", \"Navn\": \"M\\u00e5lscorere\", \"Poeng\": \"M\\u00e5l\",//g' fasit.json", stdout=PIPE)
+    p2.communicate()
+    return Response("{s:'o'}", status=201, mimetype='application/json')
+    #try:
+    #    subprocess.run("pwd", shell=True, check=True, capture_output=True)
+    #    subprocess.run("/app/getExcel.sh", shell=True, check=True)
+    #except:
+    #    print('fail')
+    #    #return Response("{s:'f'}", status=502, mimetype='application/json')
+    #return Response("{s:'o'}", status=201, mimetype='application/json')
 
 def showjson():
     createJSON()

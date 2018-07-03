@@ -10,7 +10,7 @@ COPY . /app
 WORKDIR /app
 RUN ./getExcel.sh
 RUN touch fasit.json
-RUN chown -R netlight:1000 /app
+RUN chown netlight:1000 /app/fasit.json
 USER netlight
 
 RUN pip3 install -r requirements.txt
